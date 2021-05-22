@@ -28,7 +28,6 @@ app.use(function (req, res, next) {
 // it must have 4 parameters for Express to know that this is an error middleware
 // eslint-disable-next-line no-unused-vars
 app.use(function (err, req, res, next) {
-  logger.error(err);
   if (err instanceof NotFoundError) {
     return res.status(404).json({ error: err.message });
   }
