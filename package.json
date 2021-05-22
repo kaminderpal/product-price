@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_ENV=production node -r esm ./src/bin/www",
     "lint": "eslint --ext .js ./src",
-    "test": "jest",
+    "test": "jest --verbose",
     "test:watch": "jest --watch"
   },
   "keywords": [],
