@@ -14,8 +14,8 @@ export const getTotalCostOfAllItems = (numberOfItems, pricePerItem) => {
   if (!pricePerItem) {
     throw new Error('Please provide price of item purchased.');
   }
-  if (isNaN(pricePerItem) || typeof numberOfItems !== 'number') {
+  if (isNaN(pricePerItem) || typeof pricePerItem !== 'number') {
     throw new Error('Please enter valid price per item.');
   }
-  return numberOfItems * pricePerItem;
+  return parseFloat((numberOfItems * pricePerItem).toFixed(2));
 };
