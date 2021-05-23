@@ -22,7 +22,7 @@ export const applySalesTaxToTotalCost = (totalCost, provinceCode) => {
   if (!provinceCode) {
     throw new Error('Please provide the province code.');
   }
-  if (!taxRate[provinceCode]) {
+  if (typeof taxRate[provinceCode] === 'undefined') {
     throw new Error('Province doesn`t exist.');
   }
 
