@@ -10,10 +10,11 @@ export const getTotalCostAfterDiscount = (totalCost) => {
   if (!totalCost) {
     throw new Error('Please enter the total cost of items.');
   }
-  if (isNaN(totalCost)) {
+  if (isNaN(totalCost) || typeof totalCost !== 'number') {
     throw new Error('Please enter a valid type of total cost.');
   }
-  switch (totalCost) {
+
+  switch (true) {
     case totalCost > 1000 && totalCost <= 5000:
       return applyDiscountToTotalCost(totalCost, 0.03);
     case totalCost > 5000 && totalCost <= 7000:

@@ -16,14 +16,14 @@ export const applySalesTaxToTotalCost = (totalCost, provinceCode) => {
   if (!totalCost) {
     throw new Error('Please enter total cost of the items.');
   }
-  if (isNaN(totalCost)) {
+  if (isNaN(totalCost) || typeof totalCost !== 'number') {
     throw new Error('Please enter valid type of total cost.');
   }
   if (!provinceCode) {
-    throw new Error('Please total cost of the items.');
+    throw new Error('Please provide the province code.');
   }
   if (!taxRate[provinceCode]) {
-    throw new Error('Province doesn`t exist');
+    throw new Error('Province doesn`t exist.');
   }
 
   return totalCost + (totalCost * taxRate[provinceCode]) / 100;
