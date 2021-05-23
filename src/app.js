@@ -8,8 +8,7 @@ import cors from 'cors';
 import NotFoundError from './errors/NotFoundError';
 import totalCostRouter from './routes/totalCost';
 
-var app = express();
-var api = '/api/v1';
+const app = express();
 
 app.use(cors());
 
@@ -20,7 +19,7 @@ app.use(
   })
 );
 
-app.use(api + 'totalcost', totalCostRouter);
+app.use('/totalcost', totalCostRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
