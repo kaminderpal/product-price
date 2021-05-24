@@ -16,5 +16,5 @@ Follow the below steps to set up the project locally.
 2. Run the application
    1. Install packages with npm by running `npm install`.
    2. Start the app by running `npm start`.
-   3. Browse the api from your browser `localhost:5000/totalcost/:numberOfItems/:pricePerItem/provinceCode`
+   3. Browse the api from your browser `localhost:5000/totalcost/:numberOfItems/:pricePerItem/:provinceCode`, e.g  `localhost:5000/totalcost/5000/2/ON`
 3. Run the unit test case with `npm test`
